@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+/* Set a base font size for rem units to scale from */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fce4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background: #fff8e1;
+    padding: 2rem 3rem; /* Using rem for consistent scaling */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(248, 187, 208, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 500px; /* Ensures it doesn't get too wide on desktops */
+    border: 5px dashed #e91e63;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #4a148c;
+}
+
+.content-wrapper {
+    min-height: 300px; /* A stable minimum height to prevent shifting */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.speech-bubble {
+    display: inline-block;
+    background: #f8bbd0;
+    border: 3px solid #e91e63;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.3rem;
+    box-shadow: 4px 4px 0px #e91e63;
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 20%;
+    margin-left: -18px;
+    border-width: 18px;
+    border-style: solid;
+    border-color: #f8bbd0 transparent transparent transparent;
+    transform: rotate(135deg);
+}
+
+.speech-bubble:before {
+    content: '';
+    position: absolute;
+    bottom: -21px;
+    left: 20%;
+    margin-left: -21px;
+    border-width: 21px;
+    border-style: solid;
+    border-color: #e91e63 transparent transparent transparent;
+    transform: rotate(135deg);
+}
+
+#character-img {
+    width: 220px;
+    margin-top: 1rem;
+}
+
+#answer-dropdown {
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    background-color: #fff;
+    border: 2px solid #e91e63;
+    border-radius: 8px;
+}
+
+#feedback {
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #4a148c;
+}
+
+/* Media query to make text smaller on very small screens */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px; /* Reduces base font size, scaling all rem units down */
+    }
+    .game-container {
+        padding: 1.5rem;
+    }
+}
